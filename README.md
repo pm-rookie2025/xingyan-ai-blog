@@ -1,8 +1,51 @@
-# NotionBlog - 基于Notion的个人博客系统
+# xingyan-ai-blog
 
-![NotionBlog预览](https://source.unsplash.com/random/1200x400/?blog,notion)
+基于NotionNext和Notion API搭建的个人博客站点
 
-NotionBlog 是一个基于 NotionNext 和 Notion API 开发的现代化个人博客系统。本项目使用 Heo 主题，参考张洪 Heo 博客的设计风格，为内容创作者提供一个既美观又易于维护的内容发布平台。
+## 项目介绍
+
+这是一个使用NotionNext框架搭建的个人博客项目，通过Notion API将Notion数据库中的文章同步到个人博客站点。
+
+## 主要功能
+
+- Notion数据库内容同步
+- 支持文章、标签、分类展示
+- 响应式设计，支持移动端访问
+- 使用heo主题，界面美观现代
+
+## 本地开发
+
+1. 克隆项目
+```bash
+git clone https://github.com/你的用户名/xingyan-ai-blog.git
+cd xingyan-ai-blog/NotionNext
+```
+
+2. 安装依赖
+```bash
+npm install
+```
+
+3. 配置环境变量
+创建或编辑 `.env.local` 文件：
+```
+NOTION_PAGE_ID=你的Notion数据库ID
+NOTION_ACCESS_TOKEN=你的Notion API密钥
+NEXT_PUBLIC_THEME=heo
+NEXT_PUBLIC_LANG=zh-CN
+```
+
+4. 启动开发服务器
+```bash
+npm run dev
+```
+
+5. 访问站点
+浏览器打开 http://localhost:3000
+
+## 部署说明
+
+详细部署方法请参考 [部署指南.md](./部署指南.md)
 
 ## 🌟 主要特点
 
