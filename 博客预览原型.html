@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotionNext博客 | Heo主题预览</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        .banner-mask {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .nav-item:hover {
+            color: #06b6d4;
+        }
+        .dark .nav-item:hover {
+            color: #22d3ee;
+        }
+        #theme-toggle {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="transition-all duration-300 bg-gray-50 dark:bg-gray-900">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-70 backdrop-blur-md dark:bg-gray-800 dark:bg-opacity-70 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0 flex items-center">
+                        <img class="h-8 w-auto" src="https://cdn.jsdelivr.net/gh/tangly1024/NotionNext@main/public/favicon.ico" alt="Logo">
+                        <span class="ml-2 text-xl font-bold text-gray-900 dark:text-white">NotionBlog</span>
+                    </a>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="#" class="nav-item border-b-2 border-cyan-500 text-gray-900 dark:text-white px-3 pt-1 font-medium text-sm">首页</a>
+                        <a href="#" class="nav-item border-transparent text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-white px-3 pt-1 border-b-2 font-medium text-sm">文章</a>
+                        <a href="#" class="nav-item border-transparent text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-white px-3 pt-1 border-b-2 font-medium text-sm">分类</a>
+                        <a href="#" class="nav-item border-transparent text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-white px-3 pt-1 border-b-2 font-medium text-sm">归档</a>
+                        <a href="#" class="nav-item border-transparent text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-white px-3 pt-1 border-b-2 font-medium text-sm">友链</a>
+                        <a href="#" class="nav-item border-transparent text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-white px-3 pt-1 border-b-2 font-medium text-sm">关于</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <button class="ml-4 p-2 rounded-full text-gray-400 hover:text-gray-500 dark:hover:text-gray-300" id="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="ml-4 p-2 rounded-full text-gray-400 hover:text-gray-500 dark:hover:text-gray-300" id="theme-toggle">
+                        <i class="fas fa-sun dark:hidden"></i>
+                        <i class="fas fa-moon hidden dark:block"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页Banner -->
+    <div class="relative h-[70vh] md:h-[80vh] mb-8">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/random/1920x1080/?nature,technology');">
+            <div class="absolute inset-0 banner-mask"></div>
+        </div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-center">NotionBlog</h1>
+            <p class="text-xl md:text-2xl mb-8 text-center">基于 Notion 的个人博客系统</p>
+            <div class="flex space-x-4">
+                <a href="#articles" class="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-full text-white font-semibold transition">
+                    开始浏览
+                </a>
+                <a href="#" class="px-6 py-3 bg-white/20 hover:bg-white/30 rounded-full text-white font-semibold backdrop-blur-sm transition">
+                    了解更多
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 文章列表 -->
+    <div id="articles" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-white">最新文章</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 文章卡片1 -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md transition-all duration-300 card-hover">
+                <div class="relative">
+                    <img src="https://source.unsplash.com/random/600x400/?coding" class="w-full h-48 object-cover">
+                    <div class="absolute top-3 left-3">
+                        <span class="bg-cyan-500 text-white px-2 py-1 rounded-full text-xs">技术</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800 dark:text-white">如何使用 Notion 搭建个人博客</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">本文将详细介绍如何利用 NotionNext 和 Notion API 快速搭建一个专业的个人博客系统，无需编程知识即可完成...</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img class="h-8 w-8 rounded-full" src="https://source.unsplash.com/random/100x100/?portrait" alt="Avatar">
+                            <span class="ml-2 text-sm text-gray-500 dark:text-gray-400">张三</span>
+                        </div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2023-06-15</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 文章卡片2 -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md transition-all duration-300 card-hover">
+                <div class="relative">
+                    <img src="https://source.unsplash.com/random/600x400/?design" class="w-full h-48 object-cover">
+                    <div class="absolute top-3 left-3">
+                        <span class="bg-purple-500 text-white px-2 py-1 rounded-full text-xs">设计</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800 dark:text-white">博客UI设计的10个实用技巧</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">良好的用户界面设计能够大幅提升博客的用户体验和停留时间。本文分享10个实用的博客UI设计技巧...</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img class="h-8 w-8 rounded-full" src="https://source.unsplash.com/random/100x100/?woman" alt="Avatar">
+                            <span class="ml-2 text-sm text-gray-500 dark:text-gray-400">李四</span>
+                        </div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2023-06-10</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 文章卡片3 -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md transition-all duration-300 card-hover">
+                <div class="relative">
+                    <img src="https://source.unsplash.com/random/600x400/?writing" class="w-full h-48 object-cover">
+                    <div class="absolute top-3 left-3">
+                        <span class="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs">创作</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800 dark:text-white">如何培养持续写作的习惯</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">持续输出高质量的博客内容并非易事，本文分享如何建立稳定的写作习惯，提高创作效率...</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img class="h-8 w-8 rounded-full" src="https://source.unsplash.com/random/100x100/?man" alt="Avatar">
+                            <span class="ml-2 text-sm text-gray-500 dark:text-gray-400">王五</span>
+                        </div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2023-06-05</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 加载更多按钮 -->
+        <div class="flex justify-center mt-12">
+            <button class="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-full text-white font-semibold transition">
+                加载更多
+            </button>
+        </div>
+    </div>
+    
+    <!-- 分类展示 -->
+    <div class="bg-gray-100 dark:bg-gray-800 py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-white">文章分类</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="#" class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-sm text-center hover:shadow-lg transition-all duration-300">
+                    <i class="fas fa-code text-4xl mb-4 text-cyan-500"></i>
+                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white">技术</h3>
+                    <p class="text-gray-500 dark:text-gray-300 text-sm">28 篇文章</p>
+                </a>
+                <a href="#" class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-sm text-center hover:shadow-lg transition-all duration-300">
+                    <i class="fas fa-paint-brush text-4xl mb-4 text-purple-500"></i>
+                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white">设计</h3>
+                    <p class="text-gray-500 dark:text-gray-300 text-sm">16 篇文章</p>
+                </a>
+                <a href="#" class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-sm text-center hover:shadow-lg transition-all duration-300">
+                    <i class="fas fa-feather text-4xl mb-4 text-yellow-500"></i>
+                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white">创作</h3>
+                    <p class="text-gray-500 dark:text-gray-300 text-sm">12 篇文章</p>
+                </a>
+                <a href="#" class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-sm text-center hover:shadow-lg transition-all duration-300">
+                    <i class="fas fa-camera text-4xl mb-4 text-green-500"></i>
+                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white">摄影</h3>
+                    <p class="text-gray-500 dark:text-gray-300 text-sm">9 篇文章</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 页脚 -->
+    <footer class="bg-white dark:bg-gray-900 pt-12 pb-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-gray-200 dark:border-gray-700">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-800 dark:text-white">关于博客</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">基于 Notion 和 NotionNext 搭建的个人博客系统，专注分享技术、设计和创作内容。</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400">
+                            <i class="fab fa-weixin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-800 dark:text-white">快速导航</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400">首页</a></li>
+                        <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400">文章</a></li>
+                        <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400">分类</a></li>
+                        <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400">归档</a></li>
+                        <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400">关于</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-800 dark:text-white">订阅更新</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">输入您的邮箱，订阅最新博客文章</p>
+                    <form class="flex">
+                        <input type="email" placeholder="您的邮箱地址" class="px-4 py-2 w-full rounded-l-lg border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:ring-cyan-500 focus:border-cyan-500">
+                        <button type="submit" class="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-r-lg">
+                            订阅
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+                <p class="text-gray-500 dark:text-gray-400">&copy; 2023 NotionBlog. 基于 <a href="https://github.com/tangly1024/NotionNext" class="text-cyan-500">NotionNext</a> 搭建</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-cyan-500 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // 深色模式切换
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        // 检查用户偏好
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            if (html.classList.contains('dark')) {
+                localStorage.theme = 'dark';
+            } else {
+                localStorage.theme = 'light';
+            }
+        });
+        
+        // 返回顶部按钮
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 模拟搜索功能
+        document.getElementById('search-btn').addEventListener('click', () => {
+            alert('搜索功能演示');
+        });
+    </script>
+</body>
+</html> 
