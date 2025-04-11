@@ -17,7 +17,7 @@
 
 1. 克隆项目
 ```bash
-git clone https://github.com/你的用户名/xingyan-ai-blog.git
+git clone https://github.com/pm-rookie2025/xingyan-ai-blog.git
 cd xingyan-ai-blog/NotionNext
 ```
 
