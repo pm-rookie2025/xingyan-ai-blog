@@ -2,9 +2,16 @@
   "name": "xingyan-ai-blog-root",
   "version": "1.0.0",
   "private": true,
+  "workspaces": ["NotionNext"],
   "scripts": {
     "dev": "cd NotionNext && npm run dev",
-    "build:notion": "cd NotionNext && npx next build",
+    "build": "cd NotionNext && npm run build",
     "start": "cd NotionNext && npm run start"
+  },
+  "dependencies": {
+    "next": "13.5.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "notion-client": "6.15.6"
   }
 }
