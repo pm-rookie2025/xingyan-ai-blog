@@ -1,5 +1,1 @@
-{
-  "framework": "nextjs",
-  "buildCommand": "npm install && cd NotionNext && npm run build",
-  "outputDirectory": "NotionNext/.next"
-} 
+{} 
