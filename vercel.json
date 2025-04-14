@@ -1,6 +1,6 @@
 {
   "rewrites": [{ "source": "/(.*)", "destination": "/NotionNext/$1" }],
-  "buildCommand": "chmod +x build.sh && ./build.sh",
+  "buildCommand": "cd NotionNext && npx next build",
   "outputDirectory": "NotionNext/.next",
-  "installCommand": "echo 'Skipping root install'"
+  "installCommand": "cd NotionNext && npm install"
 } 

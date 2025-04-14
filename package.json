@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "cd NotionNext && npm run dev",
-    "build": "cd NotionNext && npm run build",
+    "build:notion": "cd NotionNext && npx next build",
     "start": "cd NotionNext && npm run start"
   }
 }

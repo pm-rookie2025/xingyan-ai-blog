@@ -5,7 +5,7 @@ cd NotionNext
 echo "安装依赖"
 npm install
 
-echo "构建项目"
-npm run build
+echo "直接执行 next build 命令而不通过 npm run build"
+npx next build
 
 echo "构建完成" 
