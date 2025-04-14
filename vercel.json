@@ -1,7 +1,8 @@
 {
   "buildCommand": "cd NotionNext && npm install && npm run build",
   "outputDirectory": "NotionNext/.next",
-  "installCommand": "echo 'Skipping root install'",
+  "installCommand": "cd NotionNext && npm install",
+  "framework": "nextjs",
   "routes": [
     { "src": "/(.*)", "dest": "/NotionNext/$1" }
   ]
