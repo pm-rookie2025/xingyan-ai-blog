@@ -2,6 +2,7 @@
   "name": "xingyan-ai-blog-root",
   "version": "1.0.0",
   "private": true,
+  "workspaces": ["NotionNext"],
   "scripts": {
     "dev": "cd NotionNext && npm run dev",
     "build": "cd NotionNext && npm run build",
